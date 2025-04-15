@@ -7,12 +7,59 @@
 </head>
 <body>
 <main>
-    <h1>Найди себе друга!</h1>
+    <h1>Найди себе друга!!</h1>
     <form action="/pets/orders" method="POST">
 
-    </form>
-    <!--Форму размещай тут-->
+        <label> Тип животного
+            <select name="petType" id="petType" required>
+                <option value="cat">Кот</option>
+                <option value="dog">Дог</option>
+                <option value="tiger">Тигер</option>
+            </select>
+        </label>
 
+        <label> Пол
+            <input type="radio" name="gender" value="boy" checked>Мужчина
+            <input type="radio" name="gender" value="girl">Девочка
+            <input type="radio" name="gender" value="none">ХЗ
+        </label>
+
+        <label> Цвет глаз
+            <input type="color" name="eyeColor" value="eyeColor" required>
+        </label>
+
+        <label> Длина хвоста
+            <input type="number" name="tailLength" value="25" required min="7" max="120">
+        </label>
+
+        <label> Кличка
+            <input type="text" name="name" required placeholder="Киса">
+        </label>
+
+        <label>День рождения
+            <input type="date" name="dateOfBirth" required>
+        </label>
+
+        <label> Email
+            <input type="email" name="email" value="kats@gmail.com" placeholder="example@gmail.com" required>
+        </label>
+
+        <label>Телефон
+            <input type="tel" name="phone" value="+73826340720" placeholder="+7XXXXXXXXX">
+        </label>
+
+        <label> Правила
+            <input type="checkbox" name="rules" value="true" required checked>
+        </label>
+
+        <label>
+            <button type="reset">Cбросить</button>
+        </label>
+
+        <label>
+            <button type="submit">Отправить</button>
+        </label>
+    </form>
 </main>
 </body>
 </html>
